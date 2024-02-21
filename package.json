@@ -7,19 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier --write . --ext js,jsx",
     "preview": "vite preview",
-    "precommit": "npm run format && npm run lint",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{js,jsx}": "eslint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && pretty-quick --staged"
-    }
+    "prepare": "husky install",
+    "precommit": "npm run format && npm run lint"
   },
   "dependencies": {
     "react": "^18.2.0",
