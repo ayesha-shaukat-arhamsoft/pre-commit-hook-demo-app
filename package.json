@@ -10,11 +10,11 @@
     "lint:fix": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier --write . --ext js,jsx",
     "preview": "vite preview",
-    "precommit": "npm run format",
+    "precommit": "npm run format && npm run lint",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint"
+    "*.{js,jsx}": "eslint --fix"
   },
   "husky": {
     "hooks": {
